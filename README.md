@@ -78,17 +78,15 @@ GET http://ip_host:8000/records?limit=3&offset=1
   {"id": 4, "sort_order": 4000, "record_name": "Record 4"}
 ]
 ```
-
-```
-curl -X POST http://ip_host/records/move -H "Content-Type: application/json"  -d '{"record_id": 8, "before_id": 7, "after_id": 5}'
-```
-
-
 ---
 
 ### Переместить запись
 
 `POST /records/move`
+
+```
+curl -X POST http://ip_host/records/move -H "Content-Type: application/json"  -d '{"record_id": 4, "before_id": 1, "after_id": 3}'
+```
 
 **Тело запроса:**
 
