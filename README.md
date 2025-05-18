@@ -66,7 +66,7 @@ $pytest -v
 📥 **Пример запроса:**
 
 ```
-GET http://localhost:8000/records?limit=3&offset=1
+GET http://ip_host:8000/records?limit=3&offset=1
 ```
 
 📤 **Пример ответа:**
@@ -78,6 +78,11 @@ GET http://localhost:8000/records?limit=3&offset=1
   {"id": 4, "sort_order": 4000, "record_name": "Record 4"}
 ]
 ```
+
+```
+curl -X POST http://ip_host/records/move -H "Content-Type: application/json"  -d '{"record_id": 8, "before_id": 7, "after_id": 5}'
+```
+
 
 ---
 
