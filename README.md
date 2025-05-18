@@ -114,7 +114,7 @@ json {"id":4,"sort_order":2500,"record_name":"a87ff679a2f3"}
 ## 👤 Автор
 
 Имполитов Денис  
-📬 Email: [impol@mail.ru](mailto:impol@mail.ru)  
+📬 Email: [impol@yandex.ru](mailto:impol@yandex.ru)  
 💬 Telegram: [@DenImpolitov](https://t.me/DenImpolitov)
 
 ## 📄 Лицензия
