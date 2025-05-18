@@ -1,0 +1,13 @@
+pytest
+pytest-asyncio
+httpx
+pytest-mock
+asyncpg>=0.30.0
+fastapi>=0.115.12
+httpx>=0.28.1
+psycopg2-binary>=2.9.10
+pytest>=8.3.5
+pytest-asyncio>=0.26.0
+pytest-mock>=3.14.0
+twisted>=24.11.0
+uvicorn>=0.34.2

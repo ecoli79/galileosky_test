@@ -1,0 +1,8 @@
+.pytest_cache
+.godo
+.venv
+pyproject.toml
+uv.lock
+/app/__pycache__
+/tests/__pycache__
+

@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS records (id BIGSERIAL PRIMARY KEY, sort_order BIGINT NOT NULL, record_name varchar(128) NOT NULL);
