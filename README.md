@@ -39,7 +39,7 @@ docker compose up -d --build
 http://localhost:8000
 ```
 
-Остановка и удаление всех volume созданных при работе сервиса
+Остановка и удаление всех volumes созданных при работе сервиса
 
 ```
 docker compose down -v
