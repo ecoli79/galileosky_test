@@ -30,13 +30,19 @@
 ```bash
 git clone https://github.com/your-username/Galileosky_test.git
 cd Galileosky_test
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 После запуска сервис будет доступен по адресу:
 
 ```
 http://localhost:8000
+```
+
+Остановка и удаление всех volume созданных при работе сервиса
+
+```
+docker compose down -v
 ```
 
 Для запуска тестов необходимо установить зависимости из директории /test/requirements.txt
