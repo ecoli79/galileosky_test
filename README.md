@@ -103,7 +103,7 @@ curl -X POST http://ip_host/records/move -H "Content-Type: application/json"  -d
 ```
 json {"id":4,"sort_order":2500,"record_name":"a87ff679a2f3"}
 ```
-Метода возвращает данные замиси с измененным полем sort_order
+Метода возвращает данные записи с измененным полем sort_order
 
 
 **Описание:**
