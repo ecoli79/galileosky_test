@@ -5,7 +5,7 @@
 ## 📦 Возможности
 
 - Получение списка записей с пагинацией (`/records`)
-- Перемещение записи между другими по `record_id` (`/records/move`)
+- Перемещение записей (`/records/move`)
 
 Пример записей, хранящихся в БД:
 ```json
@@ -25,8 +25,37 @@
 - Docker Compose
 - PostgreSQL
 
-## ⚙️ Установка и запуск
+## 📦 Структура проект
+- директория /app/ основная директория проекта.
+- директория /app/migrations/ файлы миграции для базы данных
+- директория /app/scripts/ python скрипты для исполнения миграций базы данных.
+- директория /test/ тесты для проверки рабочих модулей сервиса
 
+## ⚙️ Установка и запуск
+Внимание! При первом запуске сервис заполняет базу данных 100 млн. строк, размер базы примерно 7.5 Gb. 
+Если вы не хотите заполнять базу данных можно закомментировать одну строку в файле /app/scripts/migrate.py. Нужно закомментировать строку в процедуре main() generate_data()
+```python
+def main():
+    ensure_migrations_table()
+    applied = get_applied_migrations()
+
+    files = sorted(f for f in os.listdir(MIGRATION_DIR) if f.endswith('.sql'))
+
+    for filename in files:
+        version = filename
+        if version in applied:
+            print(f'Skipping already applied migration {version}')
+            continue
+        
+        filepath = os.path.join(MIGRATION_DIR, filename)
+        sql = parse_migration_file(filepath)
+        apply_migration(version, sql)
+        
+    # for populate data in table records
+    generate_data()
+```
+
+Запуск сервиса:
 ```bash
 git clone https://github.com/your-username/Galileosky_test.git
 cd Galileosky_test
